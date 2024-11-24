@@ -10,12 +10,57 @@
         <title>Anh La</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
-        <link href="../../assets/css/styles.css" rel="stylesheet"/>
+        <link href="styles.css" rel="stylesheet"/>
         <!-- Add icon library -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link href="https://use.fontawesome.com/releases/v6.3.0/css/all.css" rel="stylesheet">
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
     </head>
+    <style>
+        .carousel-indicators{
+            top:50px;
+            width:75%;
+            margin-left:14%;
+            position:static;
+            margin-bottom:40px;
+        }
+        .carousel-indicators button{
+            test-indent:0!important;
+            background:0 0;
+            border:none;
+            margin:0!important;
+            postion:relative;
+            width:25%!important;
+        }
+        .carousel-indicators button:before{
+            position:absolute;
+            content:"";
+            border-top:1px solid #c8cbd0;
+            width:100%;
+            left:0;
+        }
+        .carousel-indicators button h4{
+            margin-top:-41px;
+            position:absolute;
+            left:52%;
+            transform:translatex(-50%);
+        }
+        .carousel-indicators button i{
+            margin-top:-8px;
+            position:absolute;
+        }
+        .carousel-indicators button.active i{
+            color:#2ecc71;
+        }
+        .carousel-indicators button.active h4{
+            color:#2ecc71;
+            font-size:34px;
+            position:absolute;
+            text-align:center;
+            margin-top:-49px;
+        }
+        .carousel-indicators button{}
+    </style>
     <body>
         <!-- Page content-->
         <div class="container mt-5">
@@ -44,7 +89,8 @@
                         <!-- Preview image figure>
                         <figure class="mb-4"><img class="img-fluid rounded" src="" alt="Bitcoin" /></figure-->
                         <!-- Post content-->
-                        <section class="mb-5">
+                        <section class="mb-5 timeline">
+                            <div class="container">
                             <div id="contentCarousel" class="carousel carousel-dark slide">
                                 <div class="carousel-indicators">
                                     <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -174,6 +220,7 @@
                                   <span class="visually-hidden">Next</span>
                                 </button>
                             </div>
+                        </div>    
                         </section>
                     </article>
                 </div>
@@ -181,6 +228,6 @@
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
-        <script src="../../js/scripts.js"></script>
+        <script src="scripts.js"></script>
     </body>
 </html>
